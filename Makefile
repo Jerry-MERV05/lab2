@@ -10,10 +10,10 @@ main.o: main.c isEven.h isOdd.h
 	$(CC) $(CFLAGS) -c main.c
 
 isEven.o: isEven.c isEven.h
-    $(CC) $(CFLAGS) -c isEven.c
+	$(CC) $(CFLAGS) -c isEven.c
 
 isOdd.o: isOdd.c isOdd.h
-    $(CC) $(CFLAGS) -c isOdd.c
+	$(CC) $(CFLAGS) -c isOdd.c
 
 clean:
-    rm -f *.o program
+	rm -f *.o program
