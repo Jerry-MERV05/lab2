@@ -1,6 +1,13 @@
-#include "test_functions.h"
-
+#include <stdio.h>
+#include "isEven.h"
+#include "isOdd.h"
 int main() {
-    print_message();
-    return 0;
+	int num;
+	printf("Enter an integer: ");
+	scanf("%d", &num);
+	isEven(num);
+	// add isOdd(num);
+	isOdd(num);
+    	return 0;
 }
+
