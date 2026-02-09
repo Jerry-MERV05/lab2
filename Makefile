@@ -3,14 +3,17 @@ CFLAGS = -Wall -g
 
 all: program
 
-program: main.o test_functions.o
-	$(CC) $(CFLAGS) -o program main.o test_functions.o
+program: main.o isEven.o isOdd.o
+	$(CC) $(CFLAGS) -o program main.o isEven.o isOdd.o
 
-main.o: main.c test_functions.h
+main.o: main.c isEven.h isOdd.h
 	$(CC) $(CFLAGS) -c main.c
 
-test_functions.o: test_functions.c test_functions.h
-	$(CC) $(CFLAGS) -c test_functions.c
+isEven.o: isEven.c isEven.h
+    $(CC) $(CFLAGS) -c isEven.c
+
+isOdd.o: isOdd.c isOdd.h
+    $(CC) $(CFLAGS) -c isOdd.c
 
 clean:
-	rm -f *.o program
+    rm -f *.o program
